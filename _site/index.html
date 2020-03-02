@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Deep Image Spatial Trainsformation for Person Image Generation | Yurui Ren, Xiaoming Yu, Junming Chen, Thomas H. Li, Ge Li CVPR 2020</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Deep Image Spatial Trainsformation for Person Image Generation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Yurui Ren, Xiaoming Yu, Junming Chen, Thomas H. Li, Ge Li CVPR 2020" />
+<meta property="og:description" content="Yurui Ren, Xiaoming Yu, Junming Chen, Thomas H. Li, Ge Li CVPR 2020" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Deep Image Spatial Trainsformation for Person Image Generation" />
+<script type="application/ld+json">
+{"headline":"Deep Image Spatial Trainsformation for Person Image Generation","url":"http://localhost:4000/","name":"Deep Image Spatial Trainsformation for Person Image Generation","description":"Yurui Ren, Xiaoming Yu, Junming Chen, Thomas H. Li, Ge Li CVPR 2020","@type":"WebSite","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Deep Image Spatial Trainsformation <br> for Person Image Generation</h1>
+      <h2 class="project-tagline">Yurui Ren, Xiaoming Yu, Junming Chen, Thomas H. Li, Ge Li <br> CVPR 2020
+      </h2>
+
+      
+      
+      <a href="https://github.com/RenYurui/Global-Flow-Local-Attention" class="btn">Arxiv</a>
+      <a href="https://github.com/RenYurui/Global-Flow-Local-Attention" class="btn">Code</a>
+      
+      <!-- <h2 class="project-tagline">CVPR 2020</h2> -->
+      
+<!--       <p align='center'> 
+      <a href="https://github.com/RenYurui/Global-Flow-Local-Attention">Axive</a> | 
+      <b href="https://github.com/RenYurui/Global-Flow-Local-Attention">Code</b>
+      </p> -->
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="abstract">Abstract</h1>
+<p><strong>Pose-guided person image generation</strong> is to transform a source person image to a target pose. This task requires spatial manipulations of source data. However, Convolutional Neural Networks are limited by lacking the ability to spatially transform the inputs. In this paper, we propose a differentiable <strong>global-flow local-attention framework</strong> to reassemble the inputs at the feature level. Specifically, our model first calculates the global correlations between sources and targets to predict flow fields. Then, the flowed local patch pairs are extracted from the feature maps to calculate the local attention coefficients. Finally, we warp the source features using a content-aware sampling method with the obtained local attention coefficients. The results of both subjective and objective experiments demonstrate the superiority of our model. Besides, additional results in video animation and view synthesis show that our model is applicable to other tasks requiring spatial transformation.</p>
+
+<h1 id="network-architecture">Network Architecture</h1>
+<p>Our network spatially transform the image features using a <strong>Global-Flow Local-Attention</strong> manner. First, the Flow Field Estimate is used to obtain the global flow fields which indicate the approximate sampling positions.
+<img src="./Global_flow.png" alt="Octocat" /></p>
+
+<p>Then, the local attention operation is performed for each local patch in the target features centered at position <em>l</em>. This operation allows the network sampling vivid textures from the source features according to the target pose. 
+<img src="./Local_attention.png" alt="Octocat" /></p>
+
+<h1 id="results-and-applications">Results and Applications</h1>
+
+<h3 id="pose-based-person-image-generation">Pose-based Person Image Generation</h3>
+<p align="center">  
+  <img src="./compare.pdf" width="600" />
+</p>
+<p align="center">
+  Form Left to Right: Source, Target Pose, Target Image, <a herf="https://arxiv.org/abs/1801.00055">DefGAN</a>, <a herf="https://arxiv.org/abs/1804.04694">VU-Net</a>, <a href="https://arxiv.org/abs/1904.03349">Pose-Attn</a>, <a href="http://mmlab.ie.cuhk.edu.hk/projects/pose-transfer/">Intr-Flow</a>, Ours.
+</p>
+
+<h3 id="image-animations">Image Animations</h3>
+<p align="center">  
+  <img src="./web_face.gif" />
+</p>
+
+<h3 id="view-synthesis">View Synthesis</h3>
+<p align="center">  
+  <img src="./web_car.gif" />
+</p>
+
+<p align="center">
+Form Left to Right: Source, Results of <a href="https://arxiv.org/abs/1605.03557">Appearance flow</a>, Ours, and Ground-truth images.
+</p>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
