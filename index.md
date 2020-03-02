@@ -8,10 +8,10 @@ layout: default
 
 # Network Architecture
 Our network spatially transform the image features using a **Global-Flow Local-Attention** manner. First, the Flow Field Estimate is used to obtain the global flow fields which indicate the approximate sampling positions.
-![Octocat](./Global_flow.png)
+![Octocat](https://user-images.githubusercontent.com/30292465/75703936-66385e80-5cf3-11ea-9743-c0cce2fe6458.jpg)
 
 Then, the local attention operation is performed for each local patch in the target features centered at position _l_. This operation allows the network sampling vivid textures from the source features according to the target pose. 
-![Octocat](./Local_attention.png)
+![Octocat](https://user-images.githubusercontent.com/30292465/75703859-42751880-5cf3-11ea-985b-8ed27ba5433b.jpg)
 
 # Results and Applications
 
@@ -25,12 +25,12 @@ Then, the local attention operation is performed for each local patch in the tar
 
 ### Image Animations
 <p align='center'>  
-  <img src='./web_face.gif'/>
+  <img src='https://user-images.githubusercontent.com/30292465/75703614-c1b61c80-5cf2-11ea-8730-52eaeaea08e7.gif'/>
 </p>
 
 ### View Synthesis
 <p align='center'>  
-  <img src='./web_car.gif'/>
+  <img src='https://user-images.githubusercontent.com/30292465/75703558-a9460200-5cf2-11ea-86a1-e5a651d8f727.gif'/>
 </p>
 
 <p align="center">
