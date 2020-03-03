@@ -15,7 +15,7 @@ Then, the local attention operation is performed for each local patch in the tar
 
 # Results and Applications
 
-### Pose-based Person Image Generation
+## Pose-based Person Image Generation
 <p align='center'>  
   <img src='./compare.pdf' width='600'/>
 </p>
@@ -23,14 +23,38 @@ Then, the local attention operation is performed for each local patch in the tar
   Form Left to Right: Source, Target Pose, Target Image, <a herf="https://arxiv.org/abs/1801.00055">DefGAN</a>, <a herf="https://arxiv.org/abs/1804.04694">VU-Net</a>, <a href="https://arxiv.org/abs/1904.03349">Pose-Attn</a>, <a href="http://mmlab.ie.cuhk.edu.hk/projects/pose-transfer/">Intr-Flow</a>, Ours.
 </p> 
 
-### Image Animations
+## Image Animations
+
+* **DeepFashion:**
+In this task, we use a source image and a sequence of target poses to generate the result video. This task can be seen as an extension of pose-based person image generation, which yields continuous videos.
+
+
 <p align='center'>  
-  <img src='https://user-images.githubusercontent.com/30292465/75703614-c1b61c80-5cf2-11ea-8730-52eaeaea08e7.gif'/>
+  <img src='https://user-images.githubusercontent.com/30292465/75778006-fe852080-5d91-11ea-8e76-dd87f6c021f7.gif'/>
 </p>
 
-### View Synthesis
+<p align="center">
+<b>From Left to Right</b>: Real Video, Extracted Pose, Animation Results.
+</p>
+
+* **Face Animation:**
+Given a source face and a sequence of edge images, our model generates the result video with specific motions.
+
 <p align='center'>  
-  <img src='https://user-images.githubusercontent.com/30292465/75703558-a9460200-5cf2-11ea-86a1-e5a651d8f727.gif'/>
+  <img src='https://user-images.githubusercontent.com/30292465/75703614-c1b61c80-5cf2-11ea-8730-52eaeaea08e7.gif' width='760'/>
+</p>
+
+<p align="center">
+    <b> Left</b>: Input Source Image and Edge Sequence, Right: Animation results.
+</p>
+
+## View Synthesis
+
+* **ShapeNet:**
+View synthesis requires generating novel views of objects or scenes based on arbitrary input views. In this task, we generate multi-images with different view points based on a single input source image.
+
+<p align='center'>  
+  <img src='https://user-images.githubusercontent.com/30292465/75703558-a9460200-5cf2-11ea-86a1-e5a651d8f727.gif' width='760'/>
 </p>
 
 <p align="center">
