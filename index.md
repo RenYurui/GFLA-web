@@ -7,7 +7,7 @@ layout: default
 
 
 # Network Architecture
-Our network spatially transform the image features using a **Global-Flow Local-Attention** manner. First, the Flow Field Estimate is used to obtain the global flow fields which indicate the approximate sampling positions.
+Our network spatially transforms the image features using a **Global-Flow Local-Attention** framework. First, the Flow Field Estimator is used to obtain the global flow fields which indicate the approximate sampling positions.
 ![Octocat](https://user-images.githubusercontent.com/30292465/75703936-66385e80-5cf3-11ea-9743-c0cce2fe6458.jpg)
 
 Then, the local attention operation is performed for each local patch in the target features centered at position _l_. This operation allows the network sampling vivid textures from the source features according to the target pose. 
