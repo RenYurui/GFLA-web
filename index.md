@@ -12,7 +12,7 @@ layout: simple
 
 # **Network Architecture**
 The **Global-Flow Local-Attention** model is used to spatially transform the source image information at the feature level. A Global Flow Field Estimator is first employed to predict the flow fields between sources and targets. Then, a Local Neural Texture Renderer is used to to synthesize the final results using local attention.
-![Octocat](./cf62ba0d8b5d28967aa7d0934b2e.jpg)
+![Octocat](./2e0fc90ebb6d82d09c482744c228ba90.jpg)
 
 The local attention blocks in the Local Neural Texture Renderer are responsible for transforming source information. The transformation process is shown below. For each target position, the corresponding local patch pair is first extracted. Then the local attention coefficients are predicted for content-aware sampling.
 ![Octocat](https://user-images.githubusercontent.com/30292465/75703859-42751880-5cf3-11ea-985b-8ed27ba5433b.jpg)
