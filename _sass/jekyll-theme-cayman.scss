@@ -63,20 +63,21 @@ a {
 
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  color: rgba(0, 0, 0, 0.5);
   background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 0, 0, 0.3);
   }
 
   + .btn {
@@ -124,6 +125,24 @@ a {
   }
 }
 
+.simple-header {
+  color: $header-heading-color-simple;
+  text-align: center;
+  background-color: $header-bg-color-simple;
+
+  @include large {
+    padding: 2rem 6rem 0rem 6rem;
+  }
+
+  @include medium {
+    padding: 2rem 4rem 0rem 4rem;
+  }
+
+  @include small {
+    padding: 1rem 1rem 0rem 1rem;
+  }
+}
+
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -142,7 +161,7 @@ a {
 }
 
 .project-tagline {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: normal;
   opacity: 0.7;
 
