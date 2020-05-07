@@ -9,6 +9,9 @@ layout: simple
 # **Abstract**
 **Pose-guided person image generation** is to transform a source person image to a target pose. This task requires spatial manipulations of source data. However, Convolutional Neural Networks are limited by lacking the ability to spatially transform the inputs. In this paper, we propose a differentiable **global-flow local-attention framework** to reassemble the inputs at the feature level. Specifically, our model first calculates the global correlations between sources and targets to predict flow fields. Then, the flowed local patch pairs are extracted from the feature maps to calculate the local attention coefficients. Finally, we warp the source features using a content-aware sampling method with the obtained local attention coefficients. The results of both subjective and objective experiments demonstrate the superiority of our model. Besides, additional results in video animation and view synthesis show that our model is applicable to other tasks requiring spatial transformation.
 
+<p align="center">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/zMB46Jtd11A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p> 
 
 # **Network Architecture**
 The **Global-Flow Local-Attention** model is used to spatially transform the source image information at the feature level. A Global Flow Field Estimator is first employed to predict the flow fields between sources and targets. Then, a Local Neural Texture Renderer is used to to synthesize the final results using local attention.
@@ -27,8 +30,6 @@ The local attention blocks in the Local Neural Texture Renderer are responsible 
 </p> 
 
 ### **Pose-Guided Person Image Animation**
-
-
 
 <p align='center'>  
   <img src='https://user-images.githubusercontent.com/30292465/75778006-fe852080-5d91-11ea-8e76-dd87f6c021f7.gif'/>
